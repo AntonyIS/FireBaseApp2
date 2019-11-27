@@ -41,9 +41,9 @@ public class CustomAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.item_layout, parent,false);//modify here
             viewHolder = new ViewHolder();
             //modify this block of code
-            viewHolder.mTvName = (TextView) convertView.findViewById(R.id.tvname);
-            viewHolder.mTvEmail = (TextView) convertView.findViewById(R.id.tvemail);
-            viewHolder.mTvIdNumber = (TextView) convertView.findViewById(R.id.tvidnumber);
+            viewHolder.tvUsername = (TextView) convertView.findViewById(R.id.tvUsername);
+            viewHolder.tvEmail = (TextView) convertView.findViewById(R.id.tvEmail);
+            viewHolder.tvCountry = (TextView) convertView.findViewById(R.id.tvCountry);
             //viewHolder.imageView=(ImageView) convertView.findViewById(R.id.imageView);
             //Up to here
             convertView.setTag(viewHolder);
@@ -52,15 +52,15 @@ public class CustomAdapter extends BaseAdapter {
         }
         //MODIFY THIS BLOCK OF CODE
         ColumnConstructor person = data.get(position);//modify here
-        viewHolder.mTvName.setText(person.getName());//modify here
-        viewHolder.mTvEmail.setText(person.getEmail());//modify here
-        viewHolder.mTvIdNumber.setText(person.getId_number());//modify here
+        viewHolder.tvUsername.setText(person.getName());//modify here
+        viewHolder.tvEmail.setText(person.getEmail());//modify here
+        viewHolder.tvCountry.setText(person.getCountry());//modify here
         //viewHolder.imageView.setImageResource(person.getImage());
         return convertView;
 
     }
     static class ViewHolder {
-        TextView mTvName,mTvEmail,mTvIdNumber;
+        TextView tvUsername,tvEmail,tvCountry;
     }
 
 }

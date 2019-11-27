@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 //                    create a table/child in the db
                     DatabaseReference ref =
                     FirebaseDatabase.getInstance().getReference().child("users/" + convertedTime);
-                    ColumnContructor data = new ColumnContructor(convertedTime,jina,arafa,nchi);
+                    ColumnConstructor data = new ColumnConstructor(convertedTime,jina,arafa,nchi);
 //                save data
                     dialog.show();
                     ref.setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -70,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+            }
+        });
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ViewDatActivity.class));
             }
         });
 

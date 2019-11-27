@@ -1,10 +1,10 @@
 package com.injila.firebaseapp;
 
-public class ColumnContructor {
+public class ColumnConstructor {
     String id, name, email, country;
     //generate a constructor
 
-    public ColumnContructor(String id, String name, String email, String country) {
+    public ColumnConstructor(String id, String name, String email, String country) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -13,7 +13,7 @@ public class ColumnContructor {
 //    Firebase needs an empty constructor
 
 
-    public ColumnContructor() {
+    public ColumnConstructor() {
     }
 //    generete setter and getter methods
 
